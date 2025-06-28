@@ -3,44 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API de Imágenes</title>
+    <title>API de Recursos | SenaCloud</title>
     <link rel="icon" href="https://api-img-hgs.netlify.app/img/sena.png" type="image/png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        .example {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px 0;
-        }
-    </style>
-</head>
+    <link rel="stylesheet" href="style.css">
 <body>
-    <h1>API de Imágenes y Videos</h1>
+    <h1>API de Recursos | SenaCloud</h1>
     
-    <p>Esta es una API simple para servir imágenes estáticas y videos desde Netlify.</p>
+    <p>Esta es una API simple para servir todo tipo de archivos que requieran.</p>
     
     <h2>Cómo usar</h2>
     
@@ -76,55 +45,6 @@
         <!-- Esta lista se llenará automáticamente con JavaScript -->
     </ul>
     
-    <script>
-        // Esta función se ejecutará cuando la página cargue
-        document.addEventListener('DOMContentLoaded', function() {
-            // Aquí podrías cargar dinámicamente la lista de imágenes disponibles
-            // Por ahora, mostraremos ejemplos estáticos
-            const imageExamples = [
-                { name: 'senacloud-logo.png', type: 'PNG' },
-                { name: 'senacloud-logo.svg', type: 'SVG' },
-                { name: 'ver.png', type: 'PNG' },
-                { name: 'ocultar.png', type: 'PNG' },
-                { name: 'UI.png', type: 'PNG' },
-                { name: 'IA.png', type: 'PNG' },
-                { name: 'soporte.png', type: 'PNG' },
-                { name: 'Sennova.png', type: 'PNG' },
-                { name: 'sena-negro.png', type: 'PNG' },
-                { name: 'sena-verde.png', type: 'PNG' },
-                { name: 'cursor.png', type: 'PNG' },
-                
-                // Agrega más ejemplos según sea necesario
-            ];
-            
-            const videoExamples = [
-                { name: 'ejemplo.html', type: 'Video Animado' }
-                // Agrega más ejemplos según sea necesario
-            ];
-            
-            const imageList = document.getElementById('image-list');
-            const videoList = document.getElementById('video-list');
-            
-            imageExamples.forEach(img => {
-                const listItem = document.createElement('li');
-                const link = document.createElement('a');
-                link.href = `/img/${img.name}`;
-                link.textContent = `${img.name} (${img.type})`;
-                link.target = '_blank';
-                listItem.appendChild(link);
-                imageList.appendChild(listItem);
-            });
-            
-            videoExamples.forEach(video => {
-                const listItem = document.createElement('li');
-                const link = document.createElement('a');
-                link.href = `/videos/${video.name}`;
-                link.textContent = `${video.name} (${video.type})`;
-                link.target = '_blank';
-                listItem.appendChild(link);
-                videoList.appendChild(listItem);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
