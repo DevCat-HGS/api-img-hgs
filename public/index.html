@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Imágenes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .example {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>API de Imágenes</h1>
+    
+    <p>Esta es una API simple para servir imágenes estáticas desde Netlify.</p>
+    
+    <h2>Cómo usar</h2>
+    
+    <p>Para acceder a las imágenes, utiliza la siguiente URL:</p>
+    
+    <div class="example">
+        <code>https://[tu-sitio].netlify.app/img/nombre-de-imagen.png</code>
+    </div>
+    
+    <p>También puedes acceder a imágenes SVG:</p>
+    
+    <div class="example">
+        <code>https://[tu-sitio].netlify.app/img/nombre-de-imagen.svg</code>
+    </div>
+    
+    <h2>Ejemplos de imágenes disponibles</h2>
+    
+    <p>Aquí hay algunos ejemplos de imágenes que puedes acceder:</p>
+    
+    <ul id="image-list">
+        <!-- Esta lista se llenará automáticamente con JavaScript -->
+    </ul>
+    
+    <script>
+        // Esta función se ejecutará cuando la página cargue
+        document.addEventListener('DOMContentLoaded', function() {
+            // Aquí podrías cargar dinámicamente la lista de imágenes disponibles
+            // Por ahora, mostraremos ejemplos estáticos
+            const imageExamples = [
+                { name: 'sena.png', type: 'PNG' },
+                { name: 'sena.svg', type: 'SVG' },
+                { name: 'logo.svg', type: 'SVG' }
+                // Agrega más ejemplos según sea necesario
+            ];
+            
+            const imageList = document.getElementById('image-list');
+            
+            imageExamples.forEach(img => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = `/img/${img.name}`;
+                link.textContent = `${img.name} (${img.type})`;
+                link.target = '_blank';
+                listItem.appendChild(link);
+                imageList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>

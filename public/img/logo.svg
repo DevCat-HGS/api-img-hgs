@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Fondo circular -->
+  <circle cx="100" cy="100" r="90" fill="#3498db" />
+  
+  <!-- Letra central -->
+  <text x="100" y="130" font-family="Arial, sans-serif" font-size="100" font-weight="bold" text-anchor="middle" fill="#ffffff">A</text>
+  
+  <!-- Círculo exterior decorativo -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#ffffff" stroke-width="5" />
+  
+  <!-- Pequeños círculos decorativos -->
+  <circle cx="50" cy="50" r="10" fill="#ffffff" opacity="0.7" />
+  <circle cx="150" cy="50" r="8" fill="#ffffff" opacity="0.5" />
+  <circle cx="50" cy="150" r="8" fill="#ffffff" opacity="0.5" />
+  <circle cx="150" cy="150" r="10" fill="#ffffff" opacity="0.7" />
+</svg>

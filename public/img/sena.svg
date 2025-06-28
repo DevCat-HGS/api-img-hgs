@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Fondo verde característico del SENA -->
+  <rect width="200" height="200" fill="#39A900" />
+  
+  <!-- Círculo blanco central (simplificación del logo del SENA) -->
+  <circle cx="100" cy="100" r="60" fill="#FFFFFF" />
+  
+  <!-- Letras SENA simplificadas -->
+  <text x="100" y="115" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#39A900">SENA</text>
+  
+  <!-- Elementos decorativos simplificados -->
+  <path d="M100,40 L100,70" stroke="#39A900" stroke-width="8" />
+  <path d="M100,130 L100,160" stroke="#39A900" stroke-width="8" />
+  <path d="M70,100 L40,100" stroke="#39A900" stroke-width="8" />
+  <path d="M130,100 L160,100" stroke="#39A900" stroke-width="8" />
+</svg>
