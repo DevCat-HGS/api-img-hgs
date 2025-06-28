@@ -1,6 +1,6 @@
-# API de Imágenes para Netlify
+# API de Imágenes y Videos para Netlify
 
-Este proyecto proporciona una forma sencilla de servir imágenes estáticas a través de Netlify, permitiéndote acceder a ellas mediante URLs como `example.netlify.app/img/sena.png` o `example.netlify.app/img/logo.svg`.
+Este proyecto proporciona una forma sencilla de servir imágenes estáticas y videos a través de Netlify, permitiéndote acceder a ellos mediante URLs como `example.netlify.app/img/senacloud-logo.svg` para imágenes o `example.netlify.app/videos/ejemplo.html` para videos.
 
 ## Estructura del Proyecto
 
@@ -9,28 +9,34 @@ api-images/
 ├── netlify.toml        # Configuración de Netlify
 ├── public/             # Carpeta que se desplegará
 │   ├── index.html      # Página principal con instrucciones
-│   └── img/            # Carpeta donde se almacenan las imágenes
-│       ├── sena.svg    # Ejemplo de imagen SVG del SENA
-│       └── logo.svg    # Ejemplo de imagen SVG de logo
+│   ├── img/            # Carpeta donde se almacenan las imágenes
+│   │   ├── senacloud-logo.png  # Ejemplo de imagen PNG
+│   │   └── senacloud-logo.svg  # Ejemplo de imagen SVG
+│   └── videos/         # Carpeta donde se almacenan los videos
+│       └── ejemplo.html  # Ejemplo de video animado
 └── README.md           # Este archivo
 ```
 
 ## Cómo Usar
 
-1. **Añade tus imágenes**:
+1. **Añade tus archivos**:
    - Coloca todas las imágenes que deseas servir en la carpeta `public/img/`
-   - Puedes usar formatos como PNG, JPG, SVG, GIF, etc.
+     - Puedes usar formatos como PNG, JPG, SVG, GIF, etc.
+   - Coloca todos los videos que deseas servir en la carpeta `public/videos/`
+     - Puedes usar formatos como MP4, WebM, OGG, etc.
 
 2. **Despliega en Netlify**:
    - Crea una cuenta en [Netlify](https://www.netlify.com/) si aún no tienes una
    - Conecta tu repositorio de GitHub, GitLab o Bitbucket que contenga este proyecto
    - O simplemente arrastra y suelta la carpeta `api-images` en la interfaz de Netlify
 
-3. **Accede a tus imágenes**:
+3. **Accede a tus archivos**:
    - Una vez desplegado, podrás acceder a tus imágenes usando la URL:
-   - `https://[tu-sitio].netlify.app/img/sena.svg`
-   - `https://[tu-sitio].netlify.app/img/logo.svg`
-   - O cualquier otra imagen que hayas añadido a la carpeta `img/`
+     - `https://[tu-sitio].netlify.app/img/senacloud-logo.png`
+     - `https://[tu-sitio].netlify.app/img/senacloud-logo.svg`
+   - Y a tus videos usando la URL:
+     - `https://[tu-sitio].netlify.app/videos/ejemplo.html`
+     - `https://[tu-sitio].netlify.app/videos/tu-video.mp4`
 
 ## Personalización
 

@@ -38,9 +38,9 @@
     </style>
 </head>
 <body>
-    <h1>API de Imágenes</h1>
+    <h1>API de Imágenes y Videos</h1>
     
-    <p>Esta es una API simple para servir imágenes estáticas desde Netlify.</p>
+    <p>Esta es una API simple para servir imágenes estáticas y videos desde Netlify.</p>
     
     <h2>Cómo usar</h2>
     
@@ -56,11 +56,23 @@
         <code>https://[tu-sitio].netlify.app/img/nombre-de-imagen.svg</code>
     </div>
     
-    <h2>Ejemplos de imágenes disponibles</h2>
+    <p>Para acceder a los videos, utiliza la siguiente URL:</p>
     
-    <p>Aquí hay algunos ejemplos de imágenes que puedes acceder:</p>
+    <div class="example">
+        <code>https://[tu-sitio].netlify.app/videos/nombre-de-video.mp4</code>
+    </div>
     
+    <h2>Ejemplos de imágenes y videos disponibles</h2>
+    
+    <p>Aquí hay algunos ejemplos de imágenes y videos que puedes acceder:</p>
+    
+    <h3>Imágenes</h3>
     <ul id="image-list">
+        <!-- Esta lista se llenará automáticamente con JavaScript -->
+    </ul>
+    
+    <h3>Videos</h3>
+    <ul id="video-list">
         <!-- Esta lista se llenará automáticamente con JavaScript -->
     </ul>
     
@@ -75,7 +87,13 @@
                 // Agrega más ejemplos según sea necesario
             ];
             
+            const videoExamples = [
+                { name: 'ejemplo.html', type: 'Video Animado' }
+                // Agrega más ejemplos según sea necesario
+            ];
+            
             const imageList = document.getElementById('image-list');
+            const videoList = document.getElementById('video-list');
             
             imageExamples.forEach(img => {
                 const listItem = document.createElement('li');
@@ -85,6 +103,16 @@
                 link.target = '_blank';
                 listItem.appendChild(link);
                 imageList.appendChild(listItem);
+            });
+            
+            videoExamples.forEach(video => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = `/videos/${video.name}`;
+                link.textContent = `${video.name} (${video.type})`;
+                link.target = '_blank';
+                listItem.appendChild(link);
+                videoList.appendChild(listItem);
             });
         });
     </script>
