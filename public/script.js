@@ -7,6 +7,7 @@
                 { name: 'senacloud-logo.svg', type: 'SVG' },
                 { name: 'ver.png', type: 'PNG' },
                 { name: 'ocultar.png', type: 'PNG' },
+                { name: 'image.png', type: 'PNG' },
                 { name: 'UI.png', type: 'PNG' },
                 { name: 'IA.png', type: 'PNG' },
                 { name: 'soporte.png', type: 'PNG' },
